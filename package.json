@@ -1,0 +1,32 @@
+{
+  "name": "cricket-watcher",
+  "version": "1.0.0",
+  "description": "Get personalized cricket statistics from matches you attended",
+  "main": "graphql.js",
+  "dependencies": {
+    "apollo-server-lambda": "^2.15.1",
+    "graphql": "^15.2.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.4.0"
+  },
+  "scripts": {
+    "start": "sls offline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ian-woolf/cricket-watcher.git"
+  },
+  "keywords": [
+    "cricket",
+    "statistics",
+    "graphql"
+  ],
+  "author": "Ian Woolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ian-woolf/cricket-watcher/issues"
+  },
+  "homepage": "https://github.com/ian-woolf/cricket-watcher#readme"
+}
