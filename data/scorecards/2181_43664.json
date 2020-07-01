@@ -1,0 +1,540 @@
+{
+    "body": {
+        "meta": {
+            "matchTypeId": 2,
+            "series": {
+                "id": 2181,
+                "name": "ICC Men's Cricket World Cup 2019"
+            }
+        },
+        "fullScorecard": {
+            "innings": [
+                {
+                    "id": 2,
+                    "isDeclared": false,
+                    "name": "1st Inn Sri Lanka ",
+                    "shortName": "1st SL",
+                    "team": {
+                        "id": 7,
+                        "shortName": "SL"
+                    },
+                    "batsmen": [
+                        {
+                            "id": 5122,
+                            "name": "Dimuth Karunaratne",
+                            "runs": "97",
+                            "balls": "108",
+                            "strikeRate": "89.81",
+                            "fours": "9",
+                            "sixes": "0",
+                            "howOut": "c: Maxwell b: Richardson",
+                            "fallOfWicket": "3-186",
+                            "fallOfWicketOver": "32.1",
+                            "fowOrder": 3
+                        },
+                        {
+                            "id": 4874,
+                            "name": "Kusal Perera",
+                            "runs": "52",
+                            "balls": "36",
+                            "strikeRate": "144.44",
+                            "fours": "5",
+                            "sixes": "1",
+                            "howOut": "b: Starc",
+                            "fallOfWicket": "1-115",
+                            "fallOfWicketOver": "15.3",
+                            "fowOrder": 1
+                        },
+                        {
+                            "id": 4580,
+                            "name": "Lahiru Thirimanne",
+                            "runs": "16",
+                            "balls": "26",
+                            "strikeRate": "61.54",
+                            "fours": "1",
+                            "sixes": "0",
+                            "howOut": "c: Carey b: Behrendorff",
+                            "fallOfWicket": "2-153",
+                            "fallOfWicketOver": "23.5",
+                            "fowOrder": 2
+                        },
+                        {
+                            "id": 7167,
+                            "name": "Kusal Mendis",
+                            "runs": "30",
+                            "balls": "37",
+                            "strikeRate": "81.08",
+                            "fours": "0",
+                            "sixes": "2",
+                            "howOut": "c: Carey b: Starc",
+                            "fallOfWicket": "7-222",
+                            "fallOfWicketOver": "38.1",
+                            "fowOrder": 7
+                        },
+                        {
+                            "id": 4263,
+                            "name": "Angelo Mathews",
+                            "runs": "9",
+                            "balls": "11",
+                            "strikeRate": "81.82",
+                            "fours": "2",
+                            "sixes": "0",
+                            "howOut": "c: Carey b: Cummins",
+                            "fallOfWicket": "4-205",
+                            "fallOfWicketOver": "35.4",
+                            "fowOrder": 4
+                        },
+                        {
+                            "id": 5183,
+                            "name": "Milinda Siriwardana",
+                            "runs": "3",
+                            "balls": "4",
+                            "strikeRate": "75.00",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "b: Starc",
+                            "fallOfWicket": "5-209",
+                            "fallOfWicketOver": "36.2",
+                            "fowOrder": 5
+                        },
+                        {
+                            "id": 4564,
+                            "name": "Thisara Perera",
+                            "runs": "7",
+                            "balls": "3",
+                            "strikeRate": "233.33",
+                            "fours": "0",
+                            "sixes": "1",
+                            "howOut": "c: Warner b: Starc",
+                            "fallOfWicket": "6-217",
+                            "fallOfWicketOver": "36.6",
+                            "fowOrder": 6
+                        },
+                        {
+                            "id": 5736,
+                            "name": "Dhananjaya de Silva",
+                            "runs": "16",
+                            "balls": "30",
+                            "strikeRate": "53.33",
+                            "fours": "2",
+                            "sixes": "0",
+                            "howOut": "not out",
+                            "fowOrder": 0
+                        },
+                        {
+                            "id": 4490,
+                            "name": "Isuru Udana",
+                            "runs": "8",
+                            "balls": "8",
+                            "strikeRate": "100.00",
+                            "fours": "1",
+                            "sixes": "0",
+                            "howOut": "c: Finch b: Richardson",
+                            "fallOfWicket": "8-236",
+                            "fallOfWicketOver": "39.6",
+                            "fowOrder": 8
+                        },
+                        {
+                            "id": 3178,
+                            "name": "Lasith Malinga",
+                            "runs": "1",
+                            "balls": "5",
+                            "strikeRate": "20.00",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "c: Khawaja b: Richardson",
+                            "fallOfWicket": "9-237",
+                            "fallOfWicketOver": "41.4",
+                            "fowOrder": 9
+                        },
+                        {
+                            "id": 4839,
+                            "name": "Nuwan Pradeep",
+                            "runs": "0",
+                            "balls": "7",
+                            "strikeRate": "0.00",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "c: Carey b: Cummins",
+                            "fallOfWicket": "10-247",
+                            "fallOfWicketOver": "45.5",
+                            "fowOrder": 10
+                        }
+                    ],
+                    "bowlers": [
+                        {
+                            "id": 4910,
+                            "name": "Mitchell Starc",
+                            "runsConceded": "55",
+                            "maidens": "0",
+                            "wickets": "4",
+                            "overs": "10.0",
+                            "wides": "1",
+                            "noBalls": "0",
+                            "economy": "5.50"
+                        },
+                        {
+                            "id": 5164,
+                            "name": "Pat Cummins",
+                            "runsConceded": "38",
+                            "maidens": "0",
+                            "wickets": "2",
+                            "overs": "7.5",
+                            "wides": "2",
+                            "noBalls": "0",
+                            "economy": "4.85"
+                        },
+                        {
+                            "id": 5959,
+                            "name": "Jason Behrendorff",
+                            "runsConceded": "59",
+                            "maidens": "0",
+                            "wickets": "1",
+                            "overs": "9.0",
+                            "wides": "0",
+                            "noBalls": "0",
+                            "economy": "6.56"
+                        },
+                        {
+                            "id": 5180,
+                            "name": "Kane Richardson",
+                            "runsConceded": "47",
+                            "maidens": "1",
+                            "wickets": "3",
+                            "overs": "9.0",
+                            "wides": "2",
+                            "noBalls": "0",
+                            "economy": "5.22"
+                        },
+                        {
+                            "id": 4894,
+                            "name": "Glenn Maxwell",
+                            "runsConceded": "46",
+                            "maidens": "0",
+                            "wickets": "0",
+                            "overs": "10.0",
+                            "wides": "1",
+                            "noBalls": "0",
+                            "economy": "4.60"
+                        }
+                    ],
+                    "wicket": "10",
+                    "run": "247",
+                    "over": "45.5",
+                    "extra": "8",
+                    "bye": "0",
+                    "legBye": "2",
+                    "wide": "6",
+                    "noBall": "0",
+                    "runRate": "5.39",
+                    "requiredRunRate": "21.12"
+                },
+                {
+                    "id": 1,
+                    "isDeclared": false,
+                    "name": "1st Inn Australia ",
+                    "shortName": "1st AUS",
+                    "team": {
+                        "id": 1,
+                        "shortName": "AUS"
+                    },
+                    "batsmen": [
+                        {
+                            "id": 4275,
+                            "name": "David Warner",
+                            "runs": "26",
+                            "balls": "48",
+                            "strikeRate": "54.17",
+                            "fours": "2",
+                            "sixes": "0",
+                            "howOut": "b: de Silva",
+                            "fallOfWicket": "1-80",
+                            "fallOfWicketOver": "16.4",
+                            "fowOrder": 1
+                        },
+                        {
+                            "id": 4780,
+                            "name": "Aaron Finch",
+                            "runs": "153",
+                            "balls": "132",
+                            "strikeRate": "115.91",
+                            "fours": "15",
+                            "sixes": "5",
+                            "howOut": "c: Karunaratne b: Tillakaratna",
+                            "fallOfWicket": "3-273",
+                            "fallOfWicketOver": "42.4",
+                            "fowOrder": 3
+                        },
+                        {
+                            "id": 4834,
+                            "name": "Usman Khawaja",
+                            "runs": "10",
+                            "balls": "20",
+                            "strikeRate": "50.00",
+                            "fours": "1",
+                            "sixes": "0",
+                            "howOut": "c: Tillakaratna b: de Silva",
+                            "fallOfWicket": "2-100",
+                            "fallOfWicketOver": "22.6",
+                            "fowOrder": 2
+                        },
+                        {
+                            "id": 4552,
+                            "name": "Steven Smith",
+                            "runs": "73",
+                            "balls": "59",
+                            "strikeRate": "123.73",
+                            "fours": "7",
+                            "sixes": "1",
+                            "howOut": "b: Malinga",
+                            "fallOfWicket": "4-278",
+                            "fallOfWicketOver": "43.3",
+                            "fowOrder": 4
+                        },
+                        {
+                            "id": 4894,
+                            "name": "Glenn Maxwell",
+                            "runs": "46",
+                            "balls": "25",
+                            "strikeRate": "184.00",
+                            "fours": "5",
+                            "sixes": "1",
+                            "howOut": "not out",
+                            "fowOrder": 0
+                        },
+                        {
+                            "id": 3824,
+                            "name": "Shaun Marsh",
+                            "runs": "3",
+                            "balls": "9",
+                            "strikeRate": "33.33",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "c: Siriwardana b: Tillakaratna",
+                            "fallOfWicket": "5-310",
+                            "fallOfWicketOver": "46.6",
+                            "fowOrder": 5
+                        },
+                        {
+                            "id": 8040,
+                            "name": "Alex Carey",
+                            "runs": "4",
+                            "balls": "3",
+                            "strikeRate": "133.33",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "run out (Tillakaratna)",
+                            "fallOfWicket": "6-317",
+                            "fallOfWicketOver": "48.1",
+                            "fowOrder": 6
+                        },
+                        {
+                            "id": 5164,
+                            "name": "Pat Cummins",
+                            "runs": "0",
+                            "balls": "1",
+                            "strikeRate": "0.00",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "run out (Tillakaratna)",
+                            "fallOfWicket": "7-320",
+                            "fallOfWicketOver": "48.3",
+                            "fowOrder": 7
+                        },
+                        {
+                            "id": 4910,
+                            "name": "Mitchell Starc",
+                            "runs": "5",
+                            "balls": "4",
+                            "strikeRate": "125.00",
+                            "fours": "0",
+                            "sixes": "0",
+                            "howOut": "not out",
+                            "fowOrder": 0
+                        },
+                        {
+                            "id": 5959,
+                            "name": "Jason Behrendorff",
+                            "runs": "",
+                            "balls": "",
+                            "strikeRate": "-",
+                            "fours": "",
+                            "sixes": "",
+                            "howOut": "",
+                            "fowOrder": 0
+                        },
+                        {
+                            "id": 5180,
+                            "name": "Kane Richardson",
+                            "runs": "",
+                            "balls": "",
+                            "strikeRate": "-",
+                            "fours": "",
+                            "sixes": "",
+                            "howOut": "",
+                            "fowOrder": 0
+                        }
+                    ],
+                    "bowlers": [
+                        {
+                            "id": 3178,
+                            "name": "Lasith Malinga",
+                            "runsConceded": "61",
+                            "maidens": "1",
+                            "wickets": "1",
+                            "overs": "10.0",
+                            "wides": "3",
+                            "noBalls": "1",
+                            "economy": "6.10"
+                        },
+                        {
+                            "id": 4839,
+                            "name": "Nuwan Pradeep",
+                            "runsConceded": "88",
+                            "maidens": "0",
+                            "wickets": "0",
+                            "overs": "10.0",
+                            "wides": "1",
+                            "noBalls": "0",
+                            "economy": "8.80"
+                        },
+                        {
+                            "id": 4490,
+                            "name": "Isuru Udana",
+                            "runsConceded": "57",
+                            "maidens": "0",
+                            "wickets": "2",
+                            "overs": "10.0",
+                            "wides": "1",
+                            "noBalls": "0",
+                            "economy": "5.70"
+                        },
+                        {
+                            "id": 4564,
+                            "name": "Thisara Perera",
+                            "runsConceded": "67",
+                            "maidens": "0",
+                            "wickets": "0",
+                            "overs": "10.0",
+                            "wides": "1",
+                            "noBalls": "0",
+                            "economy": "6.70"
+                        },
+                        {
+                            "id": 5736,
+                            "name": "Dhananjaya de Silva",
+                            "runsConceded": "40",
+                            "maidens": "0",
+                            "wickets": "2",
+                            "overs": "8.0",
+                            "wides": "2",
+                            "noBalls": "0",
+                            "economy": "5.00"
+                        },
+                        {
+                            "id": 5183,
+                            "name": "Milinda Siriwardana",
+                            "runsConceded": "17",
+                            "maidens": "0",
+                            "wickets": "0",
+                            "overs": "2.0",
+                            "wides": "0",
+                            "noBalls": "0",
+                            "economy": "8.50"
+                        }
+                    ],
+                    "wicket": "7",
+                    "run": "334",
+                    "over": "50.0",
+                    "extra": "14",
+                    "bye": "0",
+                    "legBye": "4",
+                    "wide": "9",
+                    "noBall": "1",
+                    "runRate": "6.68",
+                    "requiredRunRate": ""
+                }
+            ]
+        },
+        "fullScorecardAwards": {
+            "mostRunsAward": {
+                "id": 4780,
+                "name": "Aaron Finch",
+                "runs": "153",
+                "balls": "132",
+                "strikeRate": "115.91",
+                "fowOrder": 0
+            },
+            "mostWicketsAward": {
+                "id": 4910,
+                "name": "Mitchell Starc",
+                "runsConceded": "55",
+                "wickets": "4",
+                "overs": "10.0",
+                "economy": "5.5"
+            },
+            "manOfTheMatchId": 4780,
+            "manOfTheMatchName": "Aaron Finch",
+            "manOfMatchBattingResults": [
+                {
+                    "id": 4780,
+                    "name": "Aaron Finch",
+                    "runs": "153",
+                    "balls": "132",
+                    "strikeRate": "115.91",
+                    "fours": "15",
+                    "sixes": "5",
+                    "howOut": "c: Karunaratne b: Tillakaratna",
+                    "fallOfWicket": "3-273",
+                    "fallOfWicketOver": "42.4",
+                    "fowOrder": 3
+                }
+            ],
+            "manOfMatchBowlngResults": [],
+            "mostRunsAwardPlayerResults": [
+                {
+                    "id": 4780,
+                    "name": "Aaron Finch",
+                    "runs": "153",
+                    "balls": "132",
+                    "strikeRate": "115.91",
+                    "fours": "15",
+                    "sixes": "5",
+                    "howOut": "c: Karunaratne b: Tillakaratna",
+                    "fallOfWicket": "3-273",
+                    "fallOfWicketOver": "42.4",
+                    "fowOrder": 3
+                }
+            ],
+            "mostWicketsAwardPlayerResults": [
+                {
+                    "id": 4910,
+                    "name": "Mitchell Starc",
+                    "runsConceded": "55",
+                    "maidens": "0",
+                    "wickets": "4",
+                    "overs": "10.0",
+                    "wides": "1",
+                    "noBalls": "0",
+                    "economy": "5.50"
+                }
+            ]
+        },
+        "status": 200,
+        "poweredBy": "dev132"
+    },
+    "headers": {
+        "content-type": "application/json",
+        "date": "Tue, 30 Jun 2020 19:48:53 GMT",
+        "server": "RapidAPI-1.1.15",
+        "x-powered-by": "PHP/7.2.31",
+        "x-rapidapi-region": "AWS - eu-west-1",
+        "x-rapidapi-version": "1.1.15",
+        "x-ratelimit-api-calls-limit": "2500",
+        "x-ratelimit-api-calls-remaining": "2480",
+        "content-length": "7300",
+        "connection": "Close"
+    },
+    "statusCode": 200,
+    "error": false
+}
