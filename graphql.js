@@ -4,7 +4,7 @@ const typeDefs = require('./schema');
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
+    matches: () => ([{id: 1, homeTeam: 10, awayTeam: 11},{id: 2, homeTeam: 11, awayTeam: 10}])
   },
 };
 
