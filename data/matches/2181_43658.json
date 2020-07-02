@@ -1,0 +1,83 @@
+{
+    "body": {
+        "match": {
+            "id": 43658,
+            "matchTypeId": 2,
+            "statisticsProvider": "Opta Sports",
+            "series": {
+                "id": 2181,
+                "name": "ICC Men's ODI World Cup 2019",
+                "shieldImageUrl": "https://www.cricket.com.au/-/media/Logos/Series/2019/series-CWC19.ashx"
+            },
+            "name": "SA v WI, Match 15",
+            "status": "COMPLETED",
+            "venue": {
+                "name": "The Rose Bowl, Southampton",
+                "location": "",
+                "latitude": "",
+                "longitude": "",
+                "antisocialPhoneNumber": ""
+            },
+            "homeTeam": {
+                "isBatting": true,
+                "id": 6,
+                "name": "South Africa Men",
+                "shortName": "SA",
+                "logoUrl": "https://www.cricket.com.au/-/media/Logos/Teams/International/South-Africa.ashx",
+                "backgroundImageUrl": "https://www.cricket.com.au/-/media/Logos/Teams/Team-Backgrounds/International/SA3.ashx"
+            },
+            "awayTeam": {
+                "isBatting": false,
+                "id": 8,
+                "name": "West Indies Men",
+                "shortName": "WI",
+                "logoUrl": "https://www.cricket.com.au/-/media/Logos/Teams/International/West%20Indies.ashx",
+                "backgroundImageUrl": "https://www.cricket.com.au/-/media/Logos/Teams/Team-Backgrounds/International/WI3.ashx"
+            },
+            "currentMatchState": "COMPLETED",
+            "isMultiDay": false,
+            "matchSummaryText": "No Result: SA 2-29",
+            "scores": {
+                "homeScore": "2-29",
+                "homeOvers": "7.3",
+                "awayScore": "",
+                "awayOvers": ""
+            },
+            "liveStreams": [],
+            "isLive": false,
+            "currentInningId": 1,
+            "isMatchDrawn": true,
+            "isMatchAbandoned": false,
+            "startDateTime": "2019-06-10T09:30:00Z",
+            "endDateTime": "2019-06-10T17:15:00Z",
+            "localStartDate": "10 June 2019",
+            "localStartTime": "10:30 AM",
+            "isWomensMatch": false,
+            "cmsMatchType": "ODI",
+            "cmsMatchAssociatedType": "ODI",
+            "cmsMatchVenueStartDateTime": "",
+            "cmsMatchVenueEndDateTime": "",
+            "cmsMatchStartDate": "2019-06-10 10:30:00Z",
+            "cmsMatchEndDate": "2019-06-10 23:59",
+            "gamedayStatus": "",
+            "isGamedayEnabled": false,
+            "removeMatch": false
+        },
+        "status": 200,
+        "poweredBy": "dev132"
+    },
+    "headers": {
+        "content-type": "application/json",
+        "date": "Thu, 02 Jul 2020 22:27:15 GMT",
+        "server": "RapidAPI-1.1.15",
+        "x-powered-by": "PHP/7.2.31",
+        "x-rapidapi-region": "AWS - eu-central-1",
+        "x-rapidapi-version": "1.1.15",
+        "x-ratelimit-api-calls-limit": "2500",
+        "x-ratelimit-api-calls-remaining": "2496",
+        "content-length": "1707",
+        "connection": "Close"
+    },
+    "statusCode": 200,
+    "error": false
+}
