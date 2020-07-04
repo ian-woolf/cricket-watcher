@@ -13,6 +13,14 @@ Cricket lends itself to bespoke and complex queries, so I chose to use GraphQL f
 To run the project locally:
 
 `
+npm install
+`
+
+`
+npm run build
+`
+
+`
 npm start
 `
 

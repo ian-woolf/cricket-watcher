@@ -2,15 +2,17 @@
   "name": "cricket-watcher",
   "version": "1.0.0",
   "description": "Get personalized cricket statistics from matches you attended",
-  "main": "graphql.js",
+  "main": "dist/graphql.js",
   "dependencies": {
     "apollo-server-lambda": "^2.15.1",
     "graphql": "^15.2.0"
   },
   "devDependencies": {
-    "serverless-offline": "^6.4.0"
+    "serverless-offline": "^6.4.0",
+    "typescript": "^3.9.6"
   },
   "scripts": {
+    "build": "tsc",
     "start": "sls offline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

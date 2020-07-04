@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server-lambda');
 
-const typeDefs = gql`
+export const typeDefs = gql`
   type Query {
     matches: [Match]!
   }
@@ -11,6 +11,5 @@ const typeDefs = gql`
     awayTeam: ID!
   }
 `;
-
 
 module.exports = typeDefs;
