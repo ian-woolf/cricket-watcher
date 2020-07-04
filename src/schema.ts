@@ -7,8 +7,12 @@ export const typeDefs = gql`
 
   type Match {
     id: ID!,
-    homeTeam: ID!,
-    awayTeam: ID!
+    type: String!,
+    date: String!
+    venue: String!,
+    homeTeam: String!,
+    awayTeam: String!,
+    summary: String!
   }
 `;
 

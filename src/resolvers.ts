@@ -12,8 +12,12 @@ export const resolvers = {
       matches(){
         return matches.map(el => ({
           id: el.body.match.id,
+          type: el.body.match.cmsMatchType,
+          date: el.body.match.localStartDate,
+          venue: el.body.match.venue.name,
           homeTeam: el.body.match.homeTeam.name,
-          awayTeam: el.body.match.awayTeam.name
+          awayTeam: el.body.match.awayTeam.name,
+          summary: el.body.match.matchSummaryText
         }))
       }
     },
