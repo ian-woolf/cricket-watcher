@@ -1,12 +1,7 @@
 const { ApolloServer } = require('apollo-server-lambda');
 const typeDefs = require('./schema');
+const resolvers = require('./resolvers');
 
-// Provide resolver functions for your schema fields
-const resolvers = {
-  Query: {
-    matches: () => ([{id: 1, homeTeam: 10, awayTeam: 11},{id: 2, homeTeam: 11, awayTeam: 10}])
-  },
-};
 
 const server = new ApolloServer({
   typeDefs,
