@@ -11,9 +11,14 @@ export const typeDefs = gql`
     type: String!,
     date: String!
     venue: String!,
-    homeTeam: String!,
-    awayTeam: String!,
+    homeTeam: Team!,
+    awayTeam: Team!,
     summary: String!
+  }
+
+  type Team {
+    id: ID!,
+    name: String!
   }
 `;
 

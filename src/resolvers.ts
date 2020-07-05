@@ -16,9 +16,14 @@ interface Match {
   type: string,
   date: string
   venue: string,
-  homeTeam: string,
-  awayTeam: string,
+  homeTeam: Team,
+  awayTeam: Team,
   summary: string
+}
+
+interface Team {
+  id: number,
+  name: string
 }
 
 // takes match data from the JSON files and returns an object that matches the schema
@@ -28,8 +33,14 @@ function reduceMatch(match: {body: { match }}): Match {
     type: match.body.match.cmsMatchType,
     date: match.body.match.localStartDate,
     venue: match.body.match.venue.name,
-    homeTeam: match.body.match.homeTeam.name,
-    awayTeam: match.body.match.awayTeam.name,
+    homeTeam: {
+      id: match.body.match.homeTeam.id,
+      name: match.body.match.homeTeam.name
+    },
+    awayTeam: {
+      id: match.body.match.awayTeam.id,
+      name: match.body.match.awayTeam.name
+    },
     summary: match.body.match.matchSummaryText
   }
 }
