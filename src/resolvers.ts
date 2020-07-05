@@ -9,8 +9,20 @@ let matches = [
   require('../data/matches/2181_43676.json')
 ]
 
+// TODO: this is exactly the same as the graphQL schema
+// any way to share a source of truth?
+interface Match {
+  id: number,
+  type: string,
+  date: string
+  venue: string,
+  homeTeam: string,
+  awayTeam: string,
+  summary: string
+}
+
 // takes match data from the JSON files and returns an object that matches the schema
-function reduceMatch(match: {body: { match }}) {
+function reduceMatch(match: {body: { match }}): Match {
   return {
     id: match.body.match.id,
     type: match.body.match.cmsMatchType,
