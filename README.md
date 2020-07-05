@@ -25,3 +25,24 @@ npm start
 `
 
 Then navigate to localhost:3000/dev/graphql to use the GraphQL playground.
+
+### Example Queries ###
+
+`
+{
+	matches {
+    venue,
+    date,
+    summary
+  }
+}
+`
+
+`
+{
+  match(id: 43648) {
+    id,
+    summary
+  }
+}
+`
