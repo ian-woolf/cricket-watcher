@@ -1,5 +1,5 @@
-const { teamsData } = require('./data');
 const { UserInputError } = require('apollo-server-lambda');
+import { teamsData } from './data';
 
 // TODO: this is exactly the same as the graphQL schema
 // any way to share a source of truth?
