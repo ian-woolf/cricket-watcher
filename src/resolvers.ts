@@ -1,6 +1,6 @@
 const { UserInputError } = require('apollo-server-lambda');
 
-let matches = [
+const matches = [
   require('../data/matches/2181_43648.json'),
   require('../data/matches/2181_43652.json'),
   require('../data/matches/2181_43658.json'),
@@ -8,6 +8,14 @@ let matches = [
   require('../data/matches/2181_43668.json'),
   require('../data/matches/2181_43676.json')
 ]
+
+let teamsMap = new Map();
+matches.forEach(match => {
+  let matchObj = match.body.match;
+  teamsMap.set(matchObj.homeTeam.id, { id: matchObj.homeTeam.id, name: matchObj.homeTeam.name });
+  teamsMap.set(matchObj.awayTeam.id, { id: matchObj.awayTeam.id, name: matchObj.awayTeam.name });
+})
+const teams = Array.from(teamsMap, ([name, value]) => value);
 
 // TODO: this is exactly the same as the graphQL schema
 // any way to share a source of truth?
@@ -58,6 +66,20 @@ export const resolvers = {
           console.log(err);
           throw new UserInputError(
             `No match found with id ${id}.`
+          );
+        }
+      },
+      teams() {
+        return teams;
+      },
+      team(_, {id}) {
+        const team = teams.find(el => (el.id == id));
+        if (team) {
+          return team;
+        }
+        else {
+          throw new UserInputError(
+            `No team found with id ${id}.`
           );
         }
       }

@@ -3,7 +3,9 @@ const { gql } = require('apollo-server-lambda');
 export const typeDefs = gql`
   type Query {
     matches: [Match]!,
-    match(id: ID!): Match
+    match(id: ID!): Match,
+    teams: [Team]!,
+    team(id: ID!): Team
   }
 
   type Match {
