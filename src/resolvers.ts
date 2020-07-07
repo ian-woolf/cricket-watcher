@@ -1,5 +1,11 @@
 const { UserInputError } = require('apollo-server-lambda');
-const { matches, teams } = require('./data');
+const { matches } = require('./data');
+
+// TODO: concerned about the readability of this import
+// not sure its clear that Team is an interface and teams and team are resolvers
+// maybe its just a typescript thing I need to get used to?
+// I can find out (most of) the above with a simple mouseover in my IDE
+import { Team, teams, team } from './teams';
 
 // TODO: this is exactly the same as the graphQL schema
 // any way to share a source of truth?
@@ -11,11 +17,6 @@ interface Match {
   homeTeam: Team,
   awayTeam: Team,
   summary: string
-}
-
-interface Team {
-  id: number,
-  name: string
 }
 
 // takes match data from the JSON files and returns an object that matches the schema
@@ -53,20 +54,8 @@ export const resolvers = {
           );
         }
       },
-      teams() {
-        return teams;
-      },
-      team(_, {id}) {
-        const team = teams.find(el => (el.id == id));
-        if (team) {
-          return team;
-        }
-        else {
-          throw new UserInputError(
-            `No team found with id ${id}.`
-          );
-        }
-      }
+      teams,
+      team
     },
   };
 

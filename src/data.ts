@@ -14,4 +14,4 @@ matches.forEach(match => {
   teamsMap.set(matchObj.awayTeam.id, { id: matchObj.awayTeam.id, name: matchObj.awayTeam.name });
 })
 
-export const teams = Array.from(teamsMap, ([name, value]) => value);
+export const teamsData = Array.from(teamsMap, ([name, value]) => value);
