@@ -8,14 +8,17 @@
     "graphql": "^15.2.0"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "jest": "^26.1.0",
     "serverless-offline": "^6.4.0",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.6"
   },
   "scripts": {
     "clean": "rm -rf dist/",
     "build": "tsc",
     "start": "sls offline",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
