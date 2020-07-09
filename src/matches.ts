@@ -1,5 +1,5 @@
 const { UserInputError } = require('apollo-server-lambda');
-import { matchesData } from './data';
+import { matchesData, scorecardsData } from './data';
 import { Team } from './teams';
 
 // TODO: this is exactly the same as the graphQL schema
@@ -11,11 +11,33 @@ interface Match {
     venue: string,
     homeTeam: Team,
     awayTeam: Team,
-    summary: string
+    summary: string,
+    innings: [Innings]
+}
+
+interface Innings {
+  team: Team,
+  runs: number,
+  wickets: number,
+  overs: number
+}
+
+function reduceInnings(innings): Innings {
+  // TODO: do a better job of team
+  // scorecard only has the shortname available but the match knows the full one
+  return {
+    team: {
+      id: innings.team.id,
+      name: innings.team.shortName
+    },
+    runs: innings.run,
+    wickets: innings.wicket,
+    overs: innings.over
+  }
 }
 
 // takes match data from the JSON files and returns an object that matches the schema
-function reduceMatch(match: {body: { match }}): Match {
+function reduceMatch(match: {body: { match }}, innings: {body: { fullScorecard }}): Match {
     return {
       id: match.body.match.id,
       type: match.body.match.cmsMatchType,
@@ -29,17 +51,22 @@ function reduceMatch(match: {body: { match }}): Match {
         id: match.body.match.awayTeam.id,
         name: match.body.match.awayTeam.name
       },
-      summary: match.body.match.matchSummaryText
+      summary: match.body.match.matchSummaryText,
+      innings: innings.body.fullScorecard.innings.map(innings => reduceInnings(innings))
     }
 }
 
 export function matches() {
-  return matchesData.map(el => reduceMatch(el));
+  return matchesData.map((match, index) => reduceMatch(match, scorecardsData[index]));
 }
 
 export function match(_, {id}) {
   try {
-    return reduceMatch(matchesData.find(el => (el.body.match.id == id)));
+      let matchIndex = matchesData.findIndex(el => (el.body.match.id == id));
+    return reduceMatch(
+      matchesData[matchIndex],
+      scorecardsData[matchIndex]
+    );
   }
   catch(err) {
     console.log(err);

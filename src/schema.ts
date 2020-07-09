@@ -15,12 +15,20 @@ export const typeDefs = gql`
     venue: String!,
     homeTeam: Team!,
     awayTeam: Team!,
-    summary: String!
+    summary: String!,
+    innings: [Innings]!
   }
 
   type Team {
     id: ID!,
     name: String!
+  }
+
+  type Innings {
+    team: Team!,
+    runs: Int!,
+    wickets: Int!
+    overs: Float!
   }
 `;
 
