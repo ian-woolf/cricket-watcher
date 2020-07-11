@@ -16,9 +16,9 @@ export function reduceInnings(innings): Innings {
       id: innings.team.id,
       name: innings.team.shortName
     },
-    runs: innings.run,
-    wickets: innings.wicket,
-    overs: innings.over
+    runs: parseInt(innings.run),
+    wickets: parseInt(innings.wicket),
+    overs: Number(innings.over)
   }
 }
 
