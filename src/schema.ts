@@ -5,7 +5,8 @@ export const typeDefs = gql`
     matches: [Match]!,
     match(id: ID!): Match,
     teams: [Team]!,
-    team(id: ID!): Team
+    team(id: ID!): Team,
+    innings: [Innings]!
   }
 
   type Match {

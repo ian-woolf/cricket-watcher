@@ -1,6 +1,7 @@
 const { UserInputError } = require('apollo-server-lambda');
 import { matchesData, scorecardsData } from './data';
 import { Team } from './teams';
+import { Innings, reduceInnings } from './innings';
 
 // TODO: this is exactly the same as the graphQL schema
 // any way to share a source of truth?
@@ -13,27 +14,6 @@ interface Match {
     awayTeam: Team,
     summary: string,
     innings: [Innings]
-}
-
-interface Innings {
-  team: Team,
-  runs: number,
-  wickets: number,
-  overs: number
-}
-
-function reduceInnings(innings): Innings {
-  // TODO: do a better job of team
-  // scorecard only has the shortname available but the match knows the full one
-  return {
-    team: {
-      id: innings.team.id,
-      name: innings.team.shortName
-    },
-    runs: innings.run,
-    wickets: innings.wicket,
-    overs: innings.over
-  }
 }
 
 // takes match data from the JSON files and returns an object that matches the schema
