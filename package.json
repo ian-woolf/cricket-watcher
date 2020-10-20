@@ -4,15 +4,15 @@
   "description": "Get personalized cricket statistics from matches you attended",
   "main": "dist/graphql.js",
   "dependencies": {
-    "apollo-server-lambda": "^2.15.1",
-    "graphql": "^15.2.0"
+    "apollo-server-lambda": "^2.18.2",
+    "graphql": "^15.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.4",
-    "jest": "^26.1.0",
-    "serverless-offline": "^6.4.0",
-    "ts-jest": "^26.1.1",
-    "typescript": "^3.9.6"
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.0",
+    "serverless-offline": "^6.8.0",
+    "ts-jest": "^26.4.1",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "clean": "rm -rf dist/",
