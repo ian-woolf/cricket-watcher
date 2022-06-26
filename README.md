@@ -45,33 +45,3 @@ Then navigate to localhost:3000/dev/graphql to use the GraphQL playground.
   }
 }
 `
-
-`
-{
-  match(id: 43648) {
-    id,
-    summary
-  }
-}
-`
-
-`
-{
-  teams {
-    name
-  }
-}
-`
-
-`
-{
-  innings {
-    team {
-      name
-    },
-    runs,
-    wickets,
-    overs
-  }
-}
-`

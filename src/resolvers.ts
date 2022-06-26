@@ -1,14 +1,8 @@
-import { teams, team } from './teams';
-import { matches, match } from './matches';
-import { innings } from './innings';
+import { matches } from './matches';
 
 export const resolvers = {
     Query: {
       matches,
-      match,
-      teams,
-      team,
-      innings
     },
   };
 

@@ -1,7 +1,5 @@
 const { UserInputError } = require('apollo-server-lambda');
-import { matchesData, scorecardsData } from './data';
-import { Team } from './teams';
-import { Innings, reduceInnings } from './innings';
+import { matchesData } from './data';
 
 // TODO: this is exactly the same as the graphQL schema
 // any way to share a source of truth?
@@ -10,48 +8,23 @@ interface Match {
     type: string,
     date: string
     venue: string,
-    homeTeam: Team,
-    awayTeam: Team,
+    teams: string[],
     summary: string,
-    innings: [Innings]
+    // innings: Innings[]
 }
 
 // takes match data from the JSON files and returns an object that matches the schema
-function reduceMatch(match: {body: { match }}, innings: {body: { fullScorecard }}): Match {
+function reduceMatch(match: {info: { match_type, match_type_number, dates, venue, teams, outcome }}): Match {
     return {
-      id: match.body.match.id,
-      type: match.body.match.cmsMatchType,
-      date: match.body.match.localStartDate,
-      venue: match.body.match.venue.name,
-      homeTeam: {
-        id: match.body.match.homeTeam.id,
-        name: match.body.match.homeTeam.name
-      },
-      awayTeam: {
-        id: match.body.match.awayTeam.id,
-        name: match.body.match.awayTeam.name
-      },
-      summary: match.body.match.matchSummaryText,
-      innings: innings.body.fullScorecard.innings.map(innings => reduceInnings(innings))
+      id: match.info.match_type_number,
+      type: match.info.match_type,
+      date: match.info.dates[0],
+      venue: match.info.venue,
+      teams: match.info.teams, 
+      summary: `${match.info.outcome.winner} won` // TODO improve
     }
 }
 
 export function matches() {
-  return matchesData.map((match, index) => reduceMatch(match, scorecardsData[index]));
-}
-
-export function match(_, {id}) {
-  try {
-      let matchIndex = matchesData.findIndex(el => (el.body.match.id == id));
-    return reduceMatch(
-      matchesData[matchIndex],
-      scorecardsData[matchIndex]
-    );
-  }
-  catch(err) {
-    console.log(err);
-    throw new UserInputError(
-      `No match found with id ${id}.`
-    );
-  }
+  return matchesData.map((match) => reduceMatch(match));
 }
