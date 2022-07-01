@@ -1,5 +1,5 @@
 const { UserInputError } = require('apollo-server-lambda');
-import { matchesData } from './data';
+import { matchesData, MatchData } from './data';
 
 // TODO: this is exactly the same as the graphQL schema
 // any way to share a source of truth?
@@ -14,7 +14,7 @@ interface Match {
 }
 
 // takes match data from the JSON files and returns an object that matches the schema
-function reduceMatch(match: {info: { match_type, match_type_number, dates, venue, teams, outcome }}): Match {
+function reduceMatch(match: MatchData): Match {
     return {
       id: match.info.match_type_number,
       type: match.info.match_type,
@@ -27,7 +27,6 @@ function reduceMatch(match: {info: { match_type, match_type_number, dates, venue
 
 export function matches(parent, args, context, info) {
   const {type, venue, team} = args;
-  console.log('in matches resolver');
   const allMatches = matchesData.map((match) => reduceMatch(match));
   let matches = allMatches;
   if(type) {
