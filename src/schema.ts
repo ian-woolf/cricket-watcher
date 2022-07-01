@@ -12,6 +12,15 @@ export const typeDefs = gql`
     venue: String!,
     teams: [String]!,
     summary: String!,
+    innings: [Innings]!
+  }
+
+  type Innings {
+    team: String!,
+    inningsNumber: Int!,
+    runs: Int!,
+    wickets: Int!,
+    overs: Float!
   }
 
 `;

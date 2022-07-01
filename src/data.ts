@@ -7,6 +7,12 @@ export const matchesData = [
     require('../data/matches/1144515.json')
   ]
 
+export interface WicketData {
+  kind: string,
+  player_out: string,
+  fielders: {name: string}[]
+}
+
 export interface DeliveryData {
   batter: string,
   bowler: string,
@@ -15,7 +21,8 @@ export interface DeliveryData {
     batter: number,
     extras: number,
     total: number
-  }
+  },
+  wickets: WicketData[]
 }
 
   export interface OverData {
@@ -77,6 +84,6 @@ export interface DeliveryData {
         winner: string
       },
       venue: string,
-      innings: InningsData[]
     }
+    innings: InningsData[]
   }
