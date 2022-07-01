@@ -25,6 +25,19 @@ function reduceMatch(match: {info: { match_type, match_type_number, dates, venue
     }
 }
 
-export function matches() {
-  return matchesData.map((match) => reduceMatch(match));
+export function matches(parent, args, context, info) {
+  const {type, venue, team} = args;
+  console.log('in matches resolver');
+  const allMatches = matchesData.map((match) => reduceMatch(match));
+  let matches = allMatches;
+  if(type) {
+    matches = matches.filter((match) => match.type === type)
+  }
+  if(venue) {
+    matches = matches.filter((match) => match.venue === venue)
+  }
+  if(team) {
+    matches = matches.filter((match) => match.teams.includes(team))
+  }
+  return matches;
 }
