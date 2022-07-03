@@ -7,7 +7,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   playground: {
-    endpoint: "/dev/graphql"
+    endpoint: "/dev/graphql",
+    settings: {
+      'schema.polling.enable': false
+    }
   }
 });
 
