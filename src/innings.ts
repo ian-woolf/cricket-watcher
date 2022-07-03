@@ -1,5 +1,6 @@
 import { Team } from './teams';
-import { InningsData, OverData } from './data';
+import { InningsData, OverData, matchesData } from './data';
+import { matches } from './matches';
 
 export interface Innings {
   team: string,
@@ -45,4 +46,22 @@ export function reduceInnings(innings: InningsData, inningsNumber: number, balls
     runs: countRuns(innings.overs),
     wickets: countWickets(innings.overs)
   }
+}
+
+export function innings(parent, args, context, info) {
+  const {type, venue, team} = args;
+
+  const allMatches = matches(undefined, {type, venue, team}, undefined, undefined);
+  const allInnings = [];
+  allMatches.forEach(match => allInnings.push(...match.innings));
+
+  // sort innings by runs scored by default
+  // TODO: sorting options (maybe runs, overs, date?)
+  allInnings.sort((a, b) => b.runs - a.runs);
+
+  // relying on the match filtering is sufficient for type and venue, but not for team
+  if (team) {
+    return allInnings.filter(innings => innings.team === team)
+  }
+  return allInnings;
 }

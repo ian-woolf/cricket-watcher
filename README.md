@@ -58,3 +58,13 @@ Then navigate to localhost:3000/dev/graphql to use the GraphQL playground.
   }
 }
 `
+
+`
+  innings(type: "ODI", team: "Bangladesh", venue: "Kennington Oval")
+    {
+      team,
+      runs,
+      wickets,
+      overs
+    }
+`
